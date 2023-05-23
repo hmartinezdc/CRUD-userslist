@@ -1,0 +1,17 @@
+body {
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Flex", sans-serif;
+  background-color: var(--background-ligth-gray);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

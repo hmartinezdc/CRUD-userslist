@@ -1,0 +1,95 @@
+.form__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: 1em;
+  width: 80%;
+  max-width: 350px;
+  background-color: var(--background-ligth);
+  padding: 2em 2em 1.5em;
+  border-radius: .5em;
+  box-shadow: 4px 4px 10px hsla(0, 0%, 0%, 0.3);
+}
+.button__close {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  aspect-ratio: 1/1;
+  top: .7em;
+  right: .7em;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  transform: rotate(0);
+  transition: ease all .3s;
+}
+.button__close i {
+  font-size: 1rem;
+}
+.button__create {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: .6em 0;
+  background-color: var(--background-color-blue);
+  color: var(--font-color-white);
+  border: 0 solid transparent;
+  border-radius: .4em;
+  cursor: pointer;
+  transition: ease all .3s;
+}
+.form__title h2 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.form__title p {
+  color: var(--font-color-grayLigth);
+  font-size: .9rem;
+  text-align: center;
+}
+.form__label {
+  font-size: .9rem;
+  color: var(--font-color-grayLigth);
+  display: flex;
+  gap: .2em;
+  flex-direction: column;
+}
+.form__label>input {
+  outline: none;
+  border: 1px solid var(--font-color-grayLigth);
+  border-radius: .5em;
+  padding-left: .5em;
+  height: 35px;
+}
+.form__label:last-of-type>input{
+  text-align: center;
+  padding-left: 0;
+}
+.form__label>input:focus {
+  /* outline: 3px solid var(--background-color-lighBlue); */
+  outline: 4px solid var(--background-color-blueTrans);
+  border: 2px solid var(--background-color-blue-hover);
+}
+.form__label--password {
+  position: relative;
+}
+.form__label--password i {
+  position: absolute;
+  bottom: .68em;
+  right: .5em;
+  cursor: pointer;
+}
+.form__label--password .fa-eye {
+  color: rgb(79, 92, 120);
+}
+
+@media (hover:hover) {
+  .button__close:hover {
+    background-color: var(--background-ligth-gray);
+    transform: rotate(180deg);
+  }
+  .button__create:hover {
+    background-color: var(--background-color-blue-hover);
+  }
+}

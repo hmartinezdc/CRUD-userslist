@@ -1,0 +1,10 @@
+.modal__delete__container {
+    position: absolute;
+    position: fixed;
+    inset: 0;
+    background-color: hsla(235, 68.80%, 61.00%, 0.3);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

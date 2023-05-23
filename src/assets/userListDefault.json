@@ -1,0 +1,129 @@
+
+[
+    {
+        "id":"5b6f5b27-ce7c-45f4-9b16-ba9a78f4b2ab",
+        "email": "lillian.anderson@example.com",
+        "password": "lilili45",
+        "first_name":"Lillian",
+        "last_name": "Anderson",
+        "birthday": "1949-01-07",
+        "image_url": "https://randomuser.me/api/portraits/women/96.jpg"
+    },
+    {
+        "id":"ea39616f-e24f-4e98-bf1a-c1a1f23781aa",
+        "email": "maureen.cox@example.com",
+        "password": "aureenh",
+        "first_name":"Maureen",
+        "last_name": "Cox",
+        "birthday": "1997-04-02",
+        "image_url": "https://randomuser.me/api/portraits/women/66.jpg"
+    },
+    {
+        "id":"0f4b158b-d520-41f4-91aa-d16b49df5a4c",
+        "email": "oscar.graves@example.com",
+        "password": "graves987",
+        "first_name":"Oscar",
+        "last_name": "Graves",
+        "birthday": "1986-10-04",
+        "image_url": "https://randomuser.me/api/portraits/men/19.jpg"
+    },
+    {
+        "id":"a7b7a89b-d141-4e44-a315-94f980986728",
+        "email": "willard.moore@example.com",
+        "password": "barrett",
+        "first_name":"Willard",
+        "last_name": "Moore",
+        "birthday": "1970-07-01",
+        "image_url": "https://randomuser.me/api/portraits/men/62.jpg"
+    },
+    {
+        "id":"89ff6263-3859-4fd2-b3ce-cdf2bbc8dfd5",
+        "email": "tracy.boyd@example.com",
+        "password": "redsox",
+        "first_name":"Tracy",
+        "last_name": "Boyd",
+        "birthday": "1980-02-02",
+        "image_url": "https://randomuser.me/api/portraits/women/90.jpg"
+    },
+    {
+        "id":"dd0ef8a4-a878-4acb-8ea3-086ea7d1c1a2",
+        "email": "carolyn.scott@example.com",
+        "password": "iiiiiii",
+        "first_name":"Carolyn",
+        "last_name": "Scott",
+        "birthday": "1970-07-03",
+        "image_url": "https://randomuser.me/api/portraits/women/11.jpg"
+    },
+    {
+        "id":"a0138c54-2af8-43a8-ac66-a3b699bceaac",
+        "email": "peggy.james@example.com",
+        "password": "buddy1",
+        "first_name":"Peggy",
+        "last_name": "James",
+        "birthday": "1965-12-03",
+        "image_url": "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+        "id":"5cdba6d8-cb1f-4b79-8593-7e74b339ad46",
+        "email": "mitchell.armstrong@example.com",
+        "password": "gotham",
+        "first_name":"Mitchell",
+        "last_name": "Armstrong",
+        "birthday": "1945-01-06",
+        "image_url": "https://randomuser.me/api/portraits/men/7.jpg"
+    },
+    {
+        "id":"6a14df91-2d73-462d-b1c5-aeae134760db",
+        "email": "aubree.arnold@example.com",
+        "password": "debra",
+        "first_name":"Aubree",
+        "last_name": "Arnold",
+        "birthday": "1993-10-06",
+        "image_url": "https://randomuser.me/api/portraits/women/42.jpg"
+    },
+    {
+        "id":"02c29e97-d7fd-423b-817a-06e897f6443b",
+        "email": "harvey.washington@example.com",
+        "password": "washing456",
+        "first_name":"Harvey",
+        "last_name": "Washington",
+        "birthday": "1988-06-05",
+        "image_url": "https://randomuser.me/api/portraits/men/91.jpg"
+    },
+    {
+        "id":"2f564a92-34ba-472f-a049-a8c4825b513d",
+        "email": "anthony.holt@example.com",
+        "password": "holthy123",
+        "first_name":"Anthony",
+        "last_name": "Holt",
+        "birthday": "1948-08-06",
+        "image_url": "https://randomuser.me/api/portraits/men/75.jpg"
+    },
+    {
+        "id":"8aab9e1a-fdc9-45dc-bb24-7c72c90b3bdd",
+        "email": "joe.webb@example.com",
+        "password": "webby456",
+        "first_name":"Joe",
+        "last_name": "Webb",
+        "birthday": "1951-08-03",
+        "image_url": "https://randomuser.me/api/portraits/men/90.jpg"
+    },
+    {
+        "id":"dd51113e-feca-41ae-b22f-2f67c7a2bcb9",
+        "email": "irene.nelson@example.com",
+        "password": "optimus",
+        "first_name":"Irene",
+        "last_name": "Nelson",
+        "birthday": "1967-06-02",
+        "image_url": "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+        "id":"a2cace45-94b1-49ec-99b7-456e389fc473",
+        "email": "zack.davis@example.com",
+        "password": "davis123",
+        "first_name":"Zack",
+        "last_name": "Davis",
+        "birthday": "1952-12-06",
+        "image_url": "https://randomuser.me/api/portraits/men/11.jpg"
+    }    
+]

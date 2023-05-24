@@ -10,12 +10,16 @@ import Modal from "./components/Modal/Modal";
 import UserForm from "./components/UserForm/UserForm";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
+import { seachUsersByFullName } from "./utils/searchUsersByFullName";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [isVisibleModal, setIsVisibleModal] = useState(false);
   const [isDeleteModal, setIsDeleteModal] = useState(false);
   const [editingUserData, setEditingUserData] = useState(null);
+  const [searchUser, setSearchUser] = useState("");
+
+  const usersFilter = seachUsersByFullName(searchUser, users)
 
   const loadUsers = async () => {
     const userData = await getAllUser();
@@ -56,9 +60,13 @@ function App() {
 
   return (
     <>
-      <Header onCreate={hanbleCreate} />
+      <Header
+        onCreate={hanbleCreate}
+        searchUser={searchUser}
+        setSearchUser={setSearchUser}
+      />
       <UserList
-        users={users}
+        usersFilter={usersFilter}
         onEditUser={handleEditUser}
         onDeleteUser={handleDeleteUser}
         isDeleteModal={isDeleteModal}

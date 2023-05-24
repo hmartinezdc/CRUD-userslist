@@ -125,5 +125,41 @@
         "last_name": "Davis",
         "birthday": "1952-12-06",
         "image_url": "https://randomuser.me/api/portraits/men/11.jpg"
-    }    
+    },    
+    {
+        "id":"36a3ca43-8fa9-4a62-8592-230d1ff499be",
+        "email": "stacy.jacobs@example.com",
+        "password": "tiger1",
+        "first_name":"Stacy",
+        "last_name": "Jacobs",
+        "birthday": "1974-01-07",
+        "image_url": "https://randomuser.me/api/portraits/women/5.jpg"
+    },
+    {
+        "id":"dbbf4d85-c9a6-4f16-84d1-5595ffb124fe",
+        "email": "jordan.lynch@example.com",
+        "password": "davis123",
+        "first_name":"jordan",
+        "last_name": "Lynch",
+        "birthday": "1968-4-2",
+        "image_url": "https://randomuser.me/api/portraits/men/85.jpg"
+    },    
+    {
+        "id":"28bb7435-a76f-4803-a5c1-cff6ab932448",
+        "email": "bobby.hunter@example.com",
+        "password": "lexus",
+        "first_name":"Bobby",
+        "last_name": "Hunter",
+        "birthday": "1948-12-01",
+        "image_url": "https://randomuser.me/api/portraits/men/77.jpg"
+    },    
+    {
+        "id":"1be1c35a-4cd5-4d7f-828d-90a5c960543d",
+        "email": "kyle.carr@example.com",
+        "password": "ssssssssss",
+        "first_name":"Kyle",
+        "last_name": "Carr",
+        "birthday": "1999-04-05",
+        "image_url":"https://randomuser.me/api/portraits/men/48.jpg"
+    }
 ]

@@ -4,7 +4,7 @@ import { dateConversion } from "../../utils/dateConversion";
 import ModalDelete from "../ModalDelete/ModalDelete";
 import { useState } from "react";
 
-const UserList = ({ users, onEditUser, onDeleteUser, isDeleteModal, setIsDeleteModal }) => {
+const UserList = ({ onEditUser, onDeleteUser, isDeleteModal, setIsDeleteModal,  usersFilter  }) => {
   const [userIdToDelete, setUserIdToDelete] = useState(null);
   const [userNameToDelete, setUserNameToDelete] = useState(null);
 
@@ -20,11 +20,11 @@ const UserList = ({ users, onEditUser, onDeleteUser, isDeleteModal, setIsDeleteM
     setUserNameToDelete(null);
   };
 
-  if (!users.length) return <p>No existen usuarios</p>;
+  if (!usersFilter.length) return <p>No existen usuarios</p>;
 
   return (
     <main className="user__list-container">
-      {users.map((user) => (
+      {usersFilter.map((user) => (
         <article className="user__data--container" key={user.id}>
           <div className="user__data--image">
             <img
@@ -81,6 +81,7 @@ UserList.propTypes = {
   onDeleteUser: PropTypes.func,
   isDeleteModal: PropTypes.bool,
   setIsDeleteModal: PropTypes.func,
+  usersFilter: PropTypes.array,
 };
 
 export default UserList;

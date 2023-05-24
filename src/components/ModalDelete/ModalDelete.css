@@ -8,3 +8,86 @@
     align-items: center;
     justify-content: center;
 }
+.modal__delete--content {
+    position: relative;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    width: 80%;
+    max-width: 350px;
+    background-color: var(--background-ligth);
+    padding: 2em 2em 1.5em;
+    border-radius: .5em;
+    box-shadow: 4px 4px 10px hsla(0, 0%, 0%, 0.3);
+}
+/* ----------- x ------------- */
+.modal__delete-button--close {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: .5em;
+    right: .5em;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    transform: rotate(0);
+    transition: ease all .3s;
+}
+.modal__delete-button--close i {
+    font-size: 1rem;
+}
+/* ----------- x ------------- */
+.modal__delete__title {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+.modal__delete__title span {
+    color: var(--font-color-blue);
+}
+.modal__delete__btn {
+    font-size: 1rem;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+.modal__delete__btn--cancel {
+    font-size: .9em;
+    background-color: var(--background-ligth-gray);
+    border: 1px solid transparent;
+    border-radius: .2em;
+    padding: .3em .8em;
+    cursor: pointer;
+    transition: ease all .3s;
+}
+.modal__delete__btn--delete {
+    font-size: .9em;
+    color: var(--font-color-white);
+    background-color: var(--font-color-red);
+    border: 1px solid transparent;
+    border-radius: .2em;
+    padding: .3em .8em;
+    cursor: pointer;
+    transition: ease all .3s;
+}
+@media (hover:hover) {
+    .modal__delete-button--close:hover {
+      background-color: var(--background-ligth-gray);
+      transform: rotate(180deg);
+    }
+    .modal__delete__btn--cancel:hover {  
+        color: var(--font-color-white);
+        background-color: var(--background-color-blue);
+    }
+    .modal__delete__btn--delete:hover {
+        color: var(--font-color-white);
+        background-color: rgb(255, 67, 142);
+        border: 1px solid var(--font-color-red);
+    }
+  }

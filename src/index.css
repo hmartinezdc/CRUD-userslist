@@ -1,8 +1,9 @@
-body {
+html, body {
   /* font-family: "Montserrat", sans-serif; */
   font-family: "Roboto", sans-serif;
   font-family: "Roboto Flex", sans-serif;
   background-color: var(--background-ligth-gray);
+  height: 100%;
 }
 *,
 *::before,
@@ -14,4 +15,5 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }

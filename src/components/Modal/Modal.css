@@ -3,8 +3,8 @@
     position: fixed;
     inset: 0;
     /* background-color: hsla(235, 68.80%, 61.00%, 0.3); */
-    background-color: hsla(234, 33.80%, 31.40%, 0.50);
-    /* backdrop-filter: blur(8px); */
+    background-color: hsla(235, 68.80%, 61.00%, 0.3);
+    backdrop-filter: blur(3px);
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,7 +1,6 @@
 .header {
     position: relative;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 130px;
@@ -10,7 +9,6 @@
     /* background-color: var(--background-color-blue); */
     color: var(--font-color-white);
     border-bottom-left-radius: 5em;
-
 }
 .header__title {
     width: 70%;
@@ -30,9 +28,9 @@
 }
 .header__create {
     display: flex;
-    justify-content: flex-end;
-    width: 70%;
+    justify-content: space-between;
     position: absolute;
+    width: 70%;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 50%);
@@ -40,20 +38,46 @@
     border-radius: 0.3em;
     box-shadow: 0 4px 5px hsla(0, 0%, 0%, 0.1);
 }
+.header__create-search {
+    flex: 1;
+    padding: .6em;  
+    display: flex;
+    gap: .5em;
+    /* background-color: aqua; */
+}
+.header__create-search i {
+    font-size: 1.3rem;
+    color: var(--font-color-blue);
+    align-self: center;
+}
+.header__create-search input {
+    outline: 3px solid transparent;
+    flex: 1;
+    max-width: 0%;
+    /* min-width: 0; */
+    border: 2px solid transparent;
+    padding-left: .5em; 
+    border-radius: .3em;
+    transition: ease all .3s;
+    /* background-color: aqua; */
+}
+.header__create-search input:focus {
+    outline: 3px solid var(--background-ligth-gray);
+}
 .header__create-button {
     display: flex;
     align-items: center;
-    gap: .2em ;
+    gap: .5em ;
     border-left: 3px solid var(--background-ligth-gray);
+    padding: .6em;  
 }
 .header__create-button i {
     color: var(--background-color-blue);
-    margin-right: .6em;
+    margin-right: .3em;
 }
 .header__create-button p {
     color: var(--font-color-black);
-    font-weight: 500;
-    margin: .6em;
+    font-weight: 400;
 }
 .header__create-button button {
     background-color: var(--background-color-blue);
@@ -62,8 +86,8 @@
     border-radius: .3em;
     font-size: 1rem;
     font-weight: 700;
-    padding: .6em 1.5em;
-    margin: .6em;
+    width: 90px;
+    padding: .6em ;
     cursor: pointer;
     transition: ease all .3s;
 }

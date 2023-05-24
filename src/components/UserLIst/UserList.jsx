@@ -1,10 +1,24 @@
 import PropTypes from "prop-types";
 import "./UserList.css";
 import { dateConversion } from "../../utils/dateConversion";
-// import { useState } from "react";
+import ModalDelete from "../ModalDelete/ModalDelete";
+import { useState } from "react";
 
-const UserList = ({ users, onEditUser, onDeleteUser }) => {
-  // const [deleteUserModal, setDeleteUserModal] = useState(false);
+const UserList = ({ users, onEditUser, onDeleteUser, isDeleteModal, setIsDeleteModal }) => {
+  const [userIdToDelete, setUserIdToDelete] = useState(null);
+  const [userNameToDelete, setUserNameToDelete] = useState(null);
+
+  const handleDeleteUserModal = (userId, userName) => {
+    setIsDeleteModal(true);
+    setUserIdToDelete(userId);
+    setUserNameToDelete(userName);
+  };
+
+  const hableCloseDeleteModal = () => {
+    setIsDeleteModal(false);
+    setUserIdToDelete(null);
+    setUserNameToDelete(null);
+  };
 
   if (!users.length) return <p>No existen usuarios</p>;
 
@@ -13,7 +27,14 @@ const UserList = ({ users, onEditUser, onDeleteUser }) => {
       {users.map((user) => (
         <article className="user__data--container" key={user.id}>
           <div className="user__data--image">
-            <img src={user.image_url? user.image_url : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} alt={user.first_name + " " + user.last_name} />
+            <img
+              src={
+                user.image_url
+                  ? user.image_url
+                  : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+              }
+              alt={user.first_name + " " + user.last_name}
+            />
           </div>
           <h2 className="user__data--fullname user__data--full">
             <span>Full name: </span>
@@ -25,27 +46,31 @@ const UserList = ({ users, onEditUser, onDeleteUser }) => {
           </p>
           <p className="user__data--birthday user__data--full">
             <span>Birthday: </span>
-            { dateConversion(user.birthday) }
+            {dateConversion(user.birthday)}
           </p>
           <div className="user__data__buttons">
             <button
               className="user__data__button--edit"
               onClick={() => onEditUser(user)}
             >
-              Edit
+              <i className="fa-solid fa-pen"></i>
             </button>
             <button
               className="user__data__button--delete"
-              onClick={() => onDeleteUser(user.id)}
+              onClick={() => handleDeleteUserModal(user.id, user.first_name)}
             >
               <i className="fa-regular fa-trash-can"></i>
             </button>
-            {/* <button onClick={() => setDeleteUserModal(true)}>
-              <i className="fa-regular fa-trash-can"></i>
-            </button> */}
           </div>
         </article>
       ))}
+      <ModalDelete
+        onModalDelete={isDeleteModal}
+        onCloseDeleteModal={hableCloseDeleteModal}
+        onDeleteUser={onDeleteUser}
+        userIdToDelete={userIdToDelete}
+        userNameToDelete={userNameToDelete}
+      />
     </main>
   );
 };
@@ -54,6 +79,8 @@ UserList.propTypes = {
   users: PropTypes.array,
   onEditUser: PropTypes.func,
   onDeleteUser: PropTypes.func,
+  isDeleteModal: PropTypes.bool,
+  setIsDeleteModal: PropTypes.func,
 };
 
 export default UserList;

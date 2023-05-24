@@ -3,22 +3,24 @@ import { getAllUser } from "./services/getAllUsers";
 import { createUser } from "./services/createUser";
 import { updateUser } from "./services/updateUser";
 import { deleteUser } from "./services/deleteUser";
+import usersDefault from "./assets/userListDefault.json";
 import Header from "./components/Header/Header";
 import UserList from "./components/UserLIst/UserList";
 import Modal from "./components/Modal/Modal";
 import UserForm from "./components/UserForm/UserForm";
-import usersDefault from "./assets/userListDefault.json"
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [isVisibleModal, setIsVisibleModal] = useState(false);
+  const [isDeleteModal, setIsDeleteModal] = useState(false);
   const [editingUserData, setEditingUserData] = useState(null);
 
   const loadUsers = async () => {
     const userData = await getAllUser();
     if (userData.length) setUsers(userData);
-    else setUsers(usersDefault)
+    else setUsers(usersDefault);
   };
 
   const handleCloseModal = () => {
@@ -43,8 +45,9 @@ function App() {
   };
 
   const handleDeleteUser = async (id) => {
-    await deleteUser(id)
+    await deleteUser(id);
     await loadUsers();
+    setIsDeleteModal(false);
   };
 
   useEffect(() => {
@@ -58,6 +61,8 @@ function App() {
         users={users}
         onEditUser={handleEditUser}
         onDeleteUser={handleDeleteUser}
+        isDeleteModal={isDeleteModal}
+        setIsDeleteModal={setIsDeleteModal}
       />
       <Modal isVisible={isVisibleModal}>
         <UserForm
@@ -66,6 +71,7 @@ function App() {
           initialData={editingUserData}
         />
       </Modal>
+      <Footer />
     </>
   );
 }

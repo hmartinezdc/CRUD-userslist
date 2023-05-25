@@ -1,11 +1,11 @@
 import PropType from "prop-types";
 import "./Header.css";
+import DarkMode from "../DarkMode/DarkMode";
 
 const Header = ({ onCreate, searchUser, setSearchUser }) => {
-
   const handleSearchUser = (e) => {
-    const value = e.target.value
-    setSearchUser(value)
+    const value = e.target.value;
+    setSearchUser(value);
   };
 
   return (
@@ -16,8 +16,16 @@ const Header = ({ onCreate, searchUser, setSearchUser }) => {
       </div>
       <div className="header__create">
         <div className="header__create-search">
-          <i className="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Search a user" value={searchUser} onChange={handleSearchUser} />
+          <label htmlFor="search-user">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </label>
+          <input
+            id="search-user"
+            type="text"
+            placeholder="Search a user by fullname"
+            value={searchUser}
+            onChange={handleSearchUser}
+          />
         </div>
         <div className="header__create-button">
           <p>

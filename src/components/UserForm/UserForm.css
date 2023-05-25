@@ -1,5 +1,6 @@
 .form__container {
   position: relative;
+  color: var(--font-color-black);
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -14,6 +15,7 @@
 .button__close {
   display: flex;
   align-items: center;
+  color: inherit;
   position: absolute;
   aspect-ratio: 1/1;
   top: .7em;
@@ -56,6 +58,8 @@
   flex-direction: column;
 }
 .form__label>input {
+  color: var(--font-color-black);
+  background-color: var(--bg-inpput);
   outline: none;
   border: 1px solid var(--font-color-grayLigth);
   border-radius: .5em;

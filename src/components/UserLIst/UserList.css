@@ -11,6 +11,7 @@
 }
 .user__data--container {
     /* position: relative; */
+    color: var(--font-color-black);
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -37,7 +38,7 @@
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
-    object-view-box: inset(10%);
+    /* object-view-box: inset(10%); */
 }
 .user__data--full {
     display: flex;

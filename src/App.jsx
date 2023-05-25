@@ -11,6 +11,7 @@ import UserForm from "./components/UserForm/UserForm";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 import { seachUsersByFullName } from "./utils/searchUsersByFullName";
+import DarkMode from "./components/DarkMode/DarkMode";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -18,8 +19,14 @@ function App() {
   const [isDeleteModal, setIsDeleteModal] = useState(false);
   const [editingUserData, setEditingUserData] = useState(null);
   const [searchUser, setSearchUser] = useState("");
+  const [isActiveDarkMode, setIsActiveDarkMode] = useState(false);
 
-  const usersFilter = seachUsersByFullName(searchUser, users)
+  const haldleActiveDarkMode = () => {
+    setIsActiveDarkMode(!isActiveDarkMode);
+    document.body.classList.toggle("dark-mode");
+  };
+
+  const usersFilter = seachUsersByFullName(searchUser, users);
 
   const loadUsers = async () => {
     const userData = await getAllUser();
@@ -60,6 +67,8 @@ function App() {
 
   return (
     <>
+      <DarkMode onDarkMode={haldleActiveDarkMode} isActive={isActiveDarkMode} />
+
       <Header
         onCreate={hanbleCreate}
         searchUser={searchUser}

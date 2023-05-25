@@ -10,6 +10,7 @@
 }
 .modal__delete--content {
     position: relative;
+    color: var(--font-color-black);
     font-size: 1rem;
     display: flex;
     flex-direction: column;
@@ -24,6 +25,7 @@
 }
 /* ----------- x ------------- */
 .modal__delete-button--close {
+    color: inherit;
     display: flex;
     align-items: center;
     position: absolute;
@@ -58,6 +60,7 @@
     gap: 1em;
 }
 .modal__delete__btn--cancel {
+    color: inherit;
     font-size: .9em;
     background-color: var(--background-ligth-gray);
     border: 1px solid transparent;

@@ -6,5 +6,5 @@
     list-style-type: none;
     text-align: center;
     font-size: .8rem;
-    background-image: linear-gradient(to left,var(--background-color-blue),#48719C);
+    background-image: linear-gradient(to left,var(--background-color-blue),var(--background-color-cyan) );
 }

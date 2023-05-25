@@ -1,6 +1,5 @@
 import PropType from "prop-types";
 import "./Header.css";
-import DarkMode from "../DarkMode/DarkMode";
 
 const Header = ({ onCreate, searchUser, setSearchUser }) => {
   const handleSearchUser = (e) => {

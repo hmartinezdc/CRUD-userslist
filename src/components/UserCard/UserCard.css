@@ -1,0 +1,83 @@
+.user__data--container {
+    /* position: relative; */
+    color: var(--font-color-black);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: var(--background-ligth);
+    padding: 1em;
+    border-radius: .2em;
+}
+.user__data--container span {
+    color: var(--font-color-grayLigth);
+    font-weight: 200;
+    font-size: .85rem;
+}
+.user__data--image {
+    /* position: absolute;
+    left: 1em;
+    top: 0;
+    transform: translateY(-50%); */
+    max-width: 70px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user__data--image img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    /* object-view-box: inset(10%); */
+}
+.user__data--full {
+    display: flex;
+    flex-direction: column;
+}
+.user__data--fullname {
+    font-size: 1.2rem;
+}
+.user__data--email {
+    color: var(--font-color-blue);
+}
+
+.user__data__buttons {
+    align-self: flex-end;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    flex: 1;
+}
+.user__data__button--edit {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: .2em .4em;
+    color: var(--font-color-cyan);
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: .2em;
+    transition: ease all .3s;
+}
+.user__data__button--delete {
+    font-size: .9rem;
+    padding: .2em .4em;
+    color: var(--font-color-red);
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: .2em;
+    transition: ease all .3s;
+}
+.user__data__button--delete i {
+    font-size: .9rem;
+}
+@media (hover:hover) {
+    .user__data__button--edit:hover {
+        color: white;
+        background-color: var(--font-color-cyan);   
+    }
+    .user__data__button--delete:hover {
+        color: white;
+        background-color: var(--font-color-red);
+    }
+}

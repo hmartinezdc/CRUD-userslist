@@ -19,12 +19,6 @@ function App() {
   const [isDeleteModal, setIsDeleteModal] = useState(false);
   const [editingUserData, setEditingUserData] = useState(null);
   const [searchUser, setSearchUser] = useState("");
-  const [isActiveDarkMode, setIsActiveDarkMode] = useState(false);
-
-  const haldleActiveDarkMode = () => {
-    setIsActiveDarkMode(!isActiveDarkMode);
-    document.body.classList.toggle("dark-mode");
-  };
 
   const usersFilter = seachUsersByFullName(searchUser, users);
 
@@ -67,7 +61,7 @@ function App() {
 
   return (
     <>
-      <DarkMode onDarkMode={haldleActiveDarkMode} isActive={isActiveDarkMode} />
+      <DarkMode />
 
       <Header
         onCreate={hanbleCreate}

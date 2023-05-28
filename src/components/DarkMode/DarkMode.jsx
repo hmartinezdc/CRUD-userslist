@@ -1,20 +1,22 @@
-import PropTypes from "prop-types";
+import { useState } from "react";
 
 import "./DarkMode.css";
-const DarkMode = ({ onDarkMode, isActive }) => {
+const DarkMode = () => {
+  const [isActiveDarkMode, setIsActiveDarkMode] = useState(false);
+  const haldleActiveDarkMode = () => {
+    setIsActiveDarkMode(!isActiveDarkMode);
+    document.body.classList.toggle("dark-mode");
+  };
+
   return (
     <button
-      onClick={onDarkMode}
-      className={isActive ? "switch-btn  " : "switch-btn  active"}
+      onClick={haldleActiveDarkMode}
+      className={isActiveDarkMode ? "switch-btn  " : "switch-btn  active"}
     >
       <span></span>
       <span></span>
     </button>
   );
-};
-DarkMode.propTypes = {
-  onDarkMode: PropTypes.func.isRequired,
-  isActive: PropTypes.bool.isRequired,
 };
 
 export default DarkMode;

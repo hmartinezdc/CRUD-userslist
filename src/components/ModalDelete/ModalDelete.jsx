@@ -20,7 +20,8 @@ const ModalDelete = ({
           <i className="fa-solid fa-xmark"></i>
         </button>
         <h2 className="modal__delete__title">
-          Are you sure you want to delete <span>@{userNameToDelete}</span> from this list?{" "}
+          Are you sure you want to delete <span>@{userNameToDelete}</span> from
+          this list?{" "}
         </h2>
         <div className="modal__delete__btn">
           <button
@@ -29,7 +30,12 @@ const ModalDelete = ({
           >
             Cancel
           </button>
-          <button onClick={() => onDeleteUser(userIdToDelete)} className="modal__delete__btn--delete">Delete</button>
+          <button
+            onClick={() => onDeleteUser(userIdToDelete)}
+            className="modal__delete__btn--delete"
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>
@@ -38,6 +44,7 @@ const ModalDelete = ({
 
 ModalDelete.propTypes = {
   onModalDelete: PropTypes.bool,
+  children: PropTypes.node,
   onCloseDeleteModal: PropTypes.func,
   onDeleteUser: PropTypes.func,
   userIdToDelete: PropTypes.number,

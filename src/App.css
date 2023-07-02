@@ -5,40 +5,42 @@
   margin: 0;
 }
 :root {
-    --font-color-blue: hsl(235, 69%, 61%);
-    --font-color-white: white;
-    --font-color-red:rgb(255, 0, 102);
-    --font-color-cyan:rgb(4, 211, 208);
-    --font-color-black: black ;
-    --font-color-gray: rgba(255, 255, 255, 0.7);
-    --font-color-grayLigth:rgb(202, 202, 202);
-    --background-ligth: white;
-    --background-ligth-gray: rgb(243, 245, 247);
-    --background-color-blue:hsl(235, 69%, 61%);
-    --background-color-blueTrans:hsla(214, 85%, 66%, 0.19);
-    --background-color-blue-hover:hsl(235, 69%, 70%);
-    --background-color-cyan: rgb(16, 159, 157);
-    --background-color-lighBlue: cyan;
-    --bg-inpput: white;
+  --font-color-blue: hsl(235, 69%, 61%);
+  --font-color-white: white;
+  --font-color-red: rgb(255, 0, 102);
+  --font-color-cyan: rgb(4, 211, 208);
+  --font-color-black: black;
+  --font-color-gray: rgba(255, 255, 255, 0.7);
+  --border-color-form:rgb(202, 202, 202);
+  --font-color-grayLigth: rgb(202, 202, 202);
+  --background-ligth: white;
+  --background-ligth-gray: rgb(243, 245, 247);
+  --background-color-blue: hsl(235, 69%, 61%);
+  --background-color-blueTrans: hsla(214, 85%, 66%, 0.19);
+  --background-color-blue-hover: hsl(235, 69%, 70%);
+  --background-color-cyan: rgb(16, 159, 157);
+  --background-color-lighBlue: cyan;
+  --bg-inpput: white;
 }
 .dark-mode {
-    --font-color-blue: hsl(235, 69%, 61%);
-    --font-color-white: white;
-    --font-color-red:rgb(255, 0, 102);
-    --font-color-cyan:rgb(4, 211, 208);
-    --font-color-black: white;
-    --font-color-gray: rgba(255, 255, 255, 0.7);
-    --font-color-grayLigth:rgb(202, 202, 202);
-    --background-ligth: hsl(219, 30.30%, 12.90%);
-    --background-ligth-gray: hsl(216, 29.40%, 10.00%);
-    --background-color-blue:hsl(235, 69%, 61%);
-    --background-color-blueTrans:hsla(214, 85%, 66%, 0.19);
-    --background-color-blue-hover:hsl(235, 69%, 70%);
-    --background-color-cyan: rgb(16, 159, 157);
-    --background-color-lighBlue: cyan;
-    --bg-inpput: hsl(209, 39%, 20%);
+  --font-color-blue: hsl(235, 69%, 61%);
+  --font-color-white: white;
+  --font-color-red: rgb(255, 0, 102);
+  --font-color-cyan: rgb(4, 211, 208);
+  --font-color-black: white;
+  --font-color-gray: rgba(255, 255, 255, 0.7);
+  --border-color-form:rgba(202, 202, 202, 0);
+  --font-color-grayLigth: rgb(202, 202, 202);
+  --background-ligth: #171e2b;
+  --background-ligth-gray: hsl(216, 29.4%, 10%);
+  --background-color-blue: hsl(235, 69%, 61%);
+  --background-color-blueTrans: hsla(214, 85%, 66%, 0.19);
+  --background-color-blue-hover: hsl(235, 69%, 70%);
+  --background-color-cyan: rgb(16, 159, 157);
+  --background-color-lighBlue: cyan;
+  --bg-inpput: #2a3850;
 }
 * {
-  transition: all ease-in-out .3s;
+  transition: ease-in-out 0.3s;
   transition-property: background-color, border-color;
 }

@@ -51,12 +51,19 @@ const UserForm = ({ onClose, onSendDataUser, initialData }) => {
         {isPasswordVisible ? (
           <i onClick={hablePasswordVisible} className="fa-solid fa-eye"></i>
         ) : (
-          <i onClick={hablePasswordVisible} className="fa-solid fa-eye-slash"></i>
+          <i
+            onClick={hablePasswordVisible}
+            className="fa-solid fa-eye-slash"
+          ></i>
         )}
       </label>
       <label className="form__label">
         Birthday
         <input type="date" {...register("birthday")} required />
+      </label>
+      <label className="form__label">
+        Photo URL
+        <input type="text" {...register("image_url")} />
       </label>
       <button className="button__create" type="submit">
         {" "}

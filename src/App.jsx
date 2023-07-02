@@ -34,6 +34,7 @@ function App() {
   };
 
   const hanbleCreate = () => {
+    setEditingUserData(null);
     setIsVisibleModal(true);
   };
 

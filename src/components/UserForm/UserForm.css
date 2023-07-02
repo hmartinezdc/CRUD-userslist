@@ -61,12 +61,12 @@
   color: var(--font-color-black);
   background-color: var(--bg-inpput);
   outline: none;
-  border: 1px solid var(--font-color-grayLigth);
+  border: 1px solid var(--border-color-form);
   border-radius: .5em;
   padding-left: .5em;
   height: 35px;
 }
-.form__label:last-of-type>input{
+.form__label:nth-of-type(5)>input{
   text-align: center;
   padding-left: 0;
 }

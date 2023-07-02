@@ -93,7 +93,7 @@
     width: 90px;
     padding: .6em ;
     cursor: pointer;
-    transition: ease all .3s;
+    transition: ease background-color,border .3s;
 }
 @media (hover:hover) {
     .header__create-button button:hover {

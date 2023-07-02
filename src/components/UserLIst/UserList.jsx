@@ -30,14 +30,17 @@ const UserList = ({
 
   return (
     <main className="user__list-container">
-      {usersFilter.map((user) => (
-        <UserCard
-          key={user.id}
-          user={user}
-          onEditUser={onEditUser}
-          handleDeleteUserModal={handleDeleteUserModal}
-        />
-      ))}
+      {usersFilter
+        .slice()
+        .sort((a, b) => a.id - b.id)
+        .map((user) => (
+          <UserCard
+            key={user.id}
+            user={user}
+            onEditUser={onEditUser}
+            handleDeleteUserModal={handleDeleteUserModal}
+          />
+        ))}
       <ModalDelete
         onModalDelete={isDeleteModal}
         onCloseDeleteModal={hableCloseDeleteModal}
@@ -45,7 +48,6 @@ const UserList = ({
         userIdToDelete={userIdToDelete}
         userNameToDelete={userNameToDelete}
       />
-        
     </main>
   );
 };

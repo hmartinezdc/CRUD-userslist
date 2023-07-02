@@ -69,13 +69,17 @@ function App() {
         searchUser={searchUser}
         setSearchUser={setSearchUser}
       />
-      <UserList
-        usersFilter={usersFilter}
-        onEditUser={handleEditUser}
-        onDeleteUser={handleDeleteUser}
-        isDeleteModal={isDeleteModal}
-        setIsDeleteModal={setIsDeleteModal}
-      />
+      {!users.length == 0 ? (
+        <UserList
+          usersFilter={usersFilter}
+          onEditUser={handleEditUser}
+          onDeleteUser={handleDeleteUser}
+          isDeleteModal={isDeleteModal}
+          setIsDeleteModal={setIsDeleteModal}
+        />
+      ) : (
+        <h3 style={{ textAlign: "center", paddingTop: "23%", paddingBottom: "23%" }}>Loading users...</h3>
+      )}
       <Modal isVisible={isVisibleModal}>
         <UserForm
           onClose={handleCloseModal}

@@ -2,20 +2,31 @@ import PropTypes from "prop-types";
 import { dateConversion } from "../../utils/dateConversion";
 import "./UserCard.css";
 
-const UserCard = ({
-  user,
-  onEditUser,
-  handleDeleteUserModal
-}) => {
+const UserCard = ({ user, onEditUser, handleDeleteUserModal }) => {
+  const isValidURL = (url) => {
+    try {
+      new URL(url);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  };
+  const validImage = (userImage) => {
+    if (userImage) {
+      if (isValidURL(userImage)) {
+        return userImage;
+      } else {
+        return "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
+      }
+    } else
+      return "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
+  };
+
   return (
     <article className="user__data--container" key={user.id}>
       <div className="user__data--image">
         <img
-          src={
-            user.image_url
-              ? user.image_url
-              : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-          }
+          src={validImage(user.image_url)}
           alt={user.first_name + " " + user.last_name}
         />
       </div>

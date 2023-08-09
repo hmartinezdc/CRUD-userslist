@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
-import "./UserForm.css";
 import { useState } from "react";
+import "./UserForm.css";
 
 const UserForm = ({ onClose, onSendDataUser, initialData }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -14,7 +14,7 @@ const UserForm = ({ onClose, onSendDataUser, initialData }) => {
     else onSendDataUser(data);
   };
 
-  const hablePasswordVisible = (e) => {
+  const handlePasswordVisible = (e) => {
     e.preventDefault();
     e.stopPropagation();
     setIsPasswordVisible(!isPasswordVisible);
@@ -49,10 +49,10 @@ const UserForm = ({ onClose, onSendDataUser, initialData }) => {
           required
         />
         {isPasswordVisible ? (
-          <i onClick={hablePasswordVisible} className="fa-solid fa-eye"></i>
+          <i onClick={handlePasswordVisible} className="fa-solid fa-eye"></i>
         ) : (
           <i
-            onClick={hablePasswordVisible}
+            onClick={handlePasswordVisible}
             className="fa-solid fa-eye-slash"
           ></i>
         )}

@@ -20,10 +20,10 @@ export const seachUsersByFullName = (fullName, usersData) => {
   
   const userFound = usersData.filter((user) => {
     const fullNameUser = `${user.first_name} ${user.last_name}`.toLowerCase();
-    const firtNameUser = user.first_name.toLowerCase();
+    const firstNameUser = user.first_name.toLowerCase();
 
     return (
-      firtNameUser.includes(searchedUser) || fullNameUser.includes(searchedUser)
+      firstNameUser.includes(searchedUser) || fullNameUser.includes(searchedUser)
     );
   });
 

@@ -53,7 +53,6 @@ const UserList = ({
 };
 
 UserList.propTypes = {
-  users: PropTypes.array,
   onEditUser: PropTypes.func,
   onDeleteUser: PropTypes.func,
   isDeleteModal: PropTypes.bool,
